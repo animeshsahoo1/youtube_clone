@@ -1,0 +1,7 @@
+.container{
+    padding: 20px 2% 20px 17%;
+    background: #f9f9f9;
+}
+.large-container{
+    padding-left: 7%;/**when the sodebar is collapsed decrease the padding left to 7% to accomodate it in whole page instead of part of it*/
+}
