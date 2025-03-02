@@ -5,3 +5,9 @@
 .large-container{
     padding-left: 7%;/**when the sodebar is collapsed decrease the padding left to 7% to accomodate it in whole page instead of part of it*/
 }
+@media (max-width:900px) {
+    .large-container,.container{
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+}

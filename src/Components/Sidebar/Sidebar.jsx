@@ -16,35 +16,40 @@ import megan from '../../assets/megan.png';
 import cameron from '../../assets/cameron.png';
 
 //sidebar prop is coming from home.jsx which is coming from app.jsx
-const Sidebar = ({sidebar}) => {
+const Sidebar = ({sidebar,category,setCategory}) => {
+    /*youtube has set some ids for various categories of videos in its API
+    we are using those categories id over here to show what category video user want to see 
+    go to youtube api docs and go to the topic video categories
+    click on list and then show code. these id can be used to find list of popular videos
+    of some category by passing  the id in youtube docs for list of popular videos*/
   return (
     <div className={`sidebar ${sidebar?"":"small-sidebar"}`}>
       <div className="shortcut-links">
-        <div className="side-link">
+        <div className={`side-link ${category===0?"active":""}`} onClick={()=>setCategory(0)}>
             <img src={home} alt="" /><p>Home</p>
         </div>
-        <div className="side-link">
+        <div className={`side-link ${category===20?"active":""}`} onClick={()=>setCategory(20)}>
             <img src={game_icon} alt="" /><p>Gaming</p>
         </div>
-        <div className="side-link">
+        <div className={`side-link ${category===2?"active":""}`} onClick={()=>setCategory(2)}>
             <img src={automobiles} alt="" /><p>Automobiles</p>
         </div>
-        <div className="side-link">
+        <div className={`side-link ${category===17?"active":""}`} onClick={()=>setCategory(17)}>
             <img src={sports} alt="" /><p>Sports</p>
         </div>
-        <div className="side-link">
+        <div className={`side-link ${category===24?"active":""}`} onClick={()=>setCategory(24)}>
             <img src={entertainment} alt="" /><p>Entertainment</p>
         </div>
-        <div className="side-link">
+        <div className={`side-link ${category===28?"active":""}`} onClick={()=>setCategory(28)}>
             <img src={tech} alt="" /><p>Technology</p>
         </div>
-        <div className="side-link">
+        <div className={`side-link ${category===10?"active":""}`} onClick={()=>setCategory(10)}>
             <img src={music} alt="" /><p>Music</p>
         </div>
-        <div className="side-link">
+        <div className={`side-link ${category===22?"active":""}`} onClick={()=>setCategory(22)}>
             <img src={blogs} alt="" /><p>Blogs</p>
         </div>
-        <div className="side-link">
+        <div className={`side-link ${category===25?"active":""}`} onClick={()=>setCategory(25)}>
             <img src={news} alt="" /><p>News</p>
         </div>
         <hr />
